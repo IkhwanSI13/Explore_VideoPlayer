@@ -11,7 +11,10 @@ class MyPlayerPresenter(var context: Context, var view: MyPlayerContract.View) :
     }
 
     /** Last watch */
-    override fun saveLastTime(contentId: Int, type: Int, lastTime: Float) {
+    override fun saveDaoLastWatch(contentId: Int, type: Int, lastTime: Float) {
+    }
+
+    override fun saveDaoHistory(contentId: Int, type: Int) {
     }
 
     /** START Fav in local or API */
@@ -32,13 +35,5 @@ class MyPlayerPresenter(var context: Context, var view: MyPlayerContract.View) :
     private fun saveFavLocal(contentId: Int, type: Int) {
     }
     /** END Fav in local or API */
-
-    override fun setHistory(contentId: Int, type: Int) {
-    }
-
-    override fun getWistiaMediaById(embed: String?) {
-        ///Example result
-        view.resultWistiaMedia(null)
-    }
 
 }
